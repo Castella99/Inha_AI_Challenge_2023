@@ -1,10 +1,10 @@
-<h1>2023 인하 인공지능 챌린지</h1>
+# 2023 인하 인공지능 챌린지
 
-<h2>[주제]</h2>
-<p>-멀티모달 데이터 기반 추천시스템 (Multi-modal Recommender System)</p>
+## [주제]
+-멀티모달 데이터 기반 추천시스템 (Multi-modal Recommender System)
 
-<h2>[대회설명]</h2>
-<p>- 추천 시스템은 사용자의 정보를 분석하여 사용자에게 적합한 상품을 추천해주는 인공지능 기술 중 하나입니다.
+## [대회설명]
+- 추천 시스템은 사용자의 정보를 분석하여 사용자에게 적합한 상품을 추천해주는 인공지능 기술 중 하나입니다.
 
   추천 시스템 기술을 통해 사용자 편의성 증가 및 사용자의 상품의 접근성을 높여 기업의 이익 증대를 기대 할 수 있습니다.
 
@@ -28,16 +28,43 @@
 
 - Multi-modal 데이터 기반의 고성능 추천 알고리즘 개발을 통해 
 
-  추천 시스템의 한계를 극복하고 사용자에게 최적화된 개인화 추천 경험을 제공하는 것을 기대합니다.</p>
+  추천 시스템의 한계를 극복하고 사용자에게 최적화된 개인화 추천 경험을 제공하는 것을 기대합니다.
 
-<a href="https://dacon.io/competitions/official/236113/overview/rules">Dacon 2023 Inha AI Challenge</a>
+## 대회
+[Dacon Inha AI Challenge 2023](https://dacon.io/competitions/official/236113/overview/rules)
 
-<h2>Method</h2>
+# Method
 ![Image](Model_overview.png)
-<p><h3><a href="https://arxiv.org/pdf/2207.05969.pdf">BM3</a></h3>
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
-| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
-<h3><a href="https://ieeexplore.ieee.org/document/9811387">SLMRec</a></h3></p>
+## Model
+- ### [BM3](https://arxiv.org/pdf/2207.05969.pdf)
+    hyperparameter
+    | Embedding | n_layers | dropout | reg_weight | cl_weight | learning_rate |
+    |------|------|------|------|------|------|
+    |512|1|0.3|0.01|2.0|0.001|
+    
+    Best public LB : 0.03954
+
+- ### [SLMRec](https://ieeexplore.ieee.org/document/9811387)
+    hyperparameter
+    | recdim | layer_num | ssl_task | reg | ssl_alpha | ssl_temp | dropout | learning_rate |
+    |----|----|----|------|----|----|----|----|
+    |64|3|FAC|0.01|0.01|1.0|0.3|0.0001|
+    |64|3|FAC|0.0001|0.01|1.0|0.3|0.0001|
+
+    Best public LB : 0.0340
+
+## Ensemble
+method : weighted voting
+Rank weight : $ 2^{100-rank} $
+### Final Result
+| public LB | private LB |
+| --------- | ---------- |
+| 0.04217 | 0.04396 |
+
+# How to run model
+## BM3
+python src/main.py -d [dataset name] -m BM3
+
+## SLMRec
+python src/main.py -d [dataset name] -m SLMRec
 

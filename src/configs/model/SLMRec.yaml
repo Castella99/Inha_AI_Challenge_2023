@@ -1,7 +1,7 @@
 recdim: 64
 layer_num: 3
 reg: [0.01, 0.0001]
-ssl_task: 'FD+FM'
+ssl_task: 'FAC'
 learning_rate: [0.0001]
 weight_decay: 1e-4
 ssl_alpha: [0.01]
