@@ -61,6 +61,10 @@ Rank weight : $ 2^{100-rank} $
 | --------- | ---------- |
 | 0.04217 | 0.04396 |
 
+# 대회 결과
+## 전체 2위, 대학원생 트랙 1위 달성 (대상 수상)
+## Team [ Medical AI Lab. ]
+
 # How to run model
 ## BM3
 python src/main.py -d [dataset name] -m BM3
