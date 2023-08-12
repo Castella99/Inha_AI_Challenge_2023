@@ -1,7 +1,7 @@
 # 2023 인하 인공지능 챌린지
 
 ## [주제]
--멀티모달 데이터 기반 추천시스템 (Multi-modal Recommender System)
+- 멀티모달 데이터 기반 추천시스템 (Multi-modal Recommender System)
 
 ## [대회설명]
 - 추천 시스템은 사용자의 정보를 분석하여 사용자에게 적합한 상품을 추천해주는 인공지능 기술 중 하나입니다.
@@ -54,8 +54,8 @@
     Best public LB : 0.0340
 
 ## Ensemble
-method : weighted voting
-Rank weight : $ 2^{100-rank} $
+- method : weighted voting\
+- Rank weight : $2^{100-rank}$
 ### Final Result
 | public LB | private LB |
 | --------- | ---------- |
