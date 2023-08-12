@@ -33,7 +33,11 @@
 <a href="https://dacon.io/competitions/official/236113/overview/rules">Dacon 2023 Inha AI Challenge</a>
 
 <h2>Method</h2>
+![Image](Model_overview.png)
 <p><h3><a href="https://arxiv.org/pdf/2207.05969.pdf">BM3</a></h3>
-
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
+| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
 <h3><a href="https://ieeexplore.ieee.org/document/9811387">SLMRec</a></h3></p>
 
