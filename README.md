@@ -63,7 +63,7 @@ Rank weight : $ 2^{100-rank} $
 
 # 대회 결과
 ### 전체 2위, 대학원생 트랙 1위 달성 (대상 수상)
-### Team [ Medical AI Lab. ]
+### Team [ Medical AI Lab. ](https://hglee6.wixsite.com/inha-mai)
 
 # How to run model
 ## BM3
